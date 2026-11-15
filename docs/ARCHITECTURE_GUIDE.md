@@ -204,18 +204,3 @@ test('should return User when login is successful', () async {
   expect(result, Right(tUser));
 });
 ```
-
-### Golden 测试（Presentation）
-逐像素验证 UI 渲染。本仓库使用 `zoloto`（不是 alchemist / golden_toolkit）：
-```dart
-void main() {
-  testGoldenWidgets('LoginScreen golden test', (tester) async {
-    await expectMatchTestEnvironments(
-      'login_screen',
-      tester: tester,
-      widget: const ProviderScope(child: LoginScreen()),
-    );
-  });
-}
-```
-全局外壳与 1.5% 容差配置在 `test/flutter_test_config.dart`；图片输出到同目录 `goldens/*.png`；刷新：`flutter test --update-goldens`。

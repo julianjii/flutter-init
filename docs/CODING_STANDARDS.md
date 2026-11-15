@@ -88,5 +88,3 @@ import 'package:init/core/logging/logger.dart'; // Good
 ### ✅ 用例测试覆盖成功 + 失败
 每个新 Use Case 都要覆盖成功与失败两条路径。现状：只有 auth（`login` / `updateProfile`）、tasks、notifications、posts 有用例测试，chat / survey 及其余 auth 用例**缺**。
 
-### ✅ UI 使用 Golden 测试
-对复杂页面使用 Golden 测试以防止视觉回归。
